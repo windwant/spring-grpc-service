@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: grpc-server
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+      discovery:
+        register: true
+        metadata:
+          grpc.port: 6568
+
+grpc:
+  port: 6568

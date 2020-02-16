@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "org.windwant.grpc.proto";
+
+message CommonRequest{
+    string name = 1;
+}
+
+message CommonResponse{
+    string result = 1;
+}

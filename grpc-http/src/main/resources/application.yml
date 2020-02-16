@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: grpc-http
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+      discovery:
+        register: true
+  http:
+      encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
+
+server:
+  port: 8080

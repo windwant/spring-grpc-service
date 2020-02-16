@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "common.proto";
+
+option java_package = "org.windwant.grpc.proto";
+
+service XXXService {
+
+    rpc hello(CommonRequest) returns (CommonResponse){}
+}
+
+
+

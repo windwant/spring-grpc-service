@@ -3,22 +3,31 @@ package org.windwant.grpc.client.config;
 import io.grpc.Channel;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.windwant.grpc.client.core.GrpcServiceDiscovery;
 import org.windwant.grpc.proto.XXXServiceGrpc;
 
 @Configuration
-@ComponentScan(basePackages = "org.windwant.grpc.client.consumer")
 public class GrpcConfiguration {
 
     @Bean
-    public XXXServiceGrpc.XXXServiceBlockingStub ucRelationQueryblockingStub(Channel channel) {
+    public XXXServiceGrpc.XXXServiceBlockingStub xxxServiceBlockingStub(Channel channel) {
         return XXXServiceGrpc.newBlockingStub(channel);
     }
 
+    @Autowired
+    GrpcServiceDiscovery grpcServiceDiscovery;
+
     @Bean
     public ManagedChannel channel() {
-        return ManagedChannelBuilder.forAddress("127.0.0.1", 6568).usePlaintext().build();
+        ServiceInstance service = grpcServiceDiscovery.getService();
+        if (service != null) {
+            return ManagedChannelBuilder.forAddress(service.getHost(), service.getPort()).usePlaintext().build();
+
+        }
+        return null;
     }
 }

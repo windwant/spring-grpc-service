@@ -60,7 +60,7 @@
         </dependency>
         <dependency>
             <groupId>org.windwant.grpc</groupId>
-            <artifactId>grpc-server</artifactId>
+            <artifactId>grpc-services</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>

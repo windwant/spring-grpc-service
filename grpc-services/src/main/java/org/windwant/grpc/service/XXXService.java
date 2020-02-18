@@ -1,4 +1,4 @@
-package org.windwant.grpc.server.service;
+package org.windwant.grpc.service;
 
 public interface XXXService {
 

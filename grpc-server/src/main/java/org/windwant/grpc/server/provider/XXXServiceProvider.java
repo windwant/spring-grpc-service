@@ -3,11 +3,11 @@ package org.windwant.grpc.server.provider;
 import io.grpc.stub.StreamObserver;
 import org.windwant.grpc.proto.Common;
 import org.windwant.grpc.proto.XXXServiceGrpc;
-import org.windwant.grpc.server.service.XXXService;
 import org.lognet.springboot.grpc.GRpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.windwant.grpc.service.XXXService;
 
 @GRpcService
 public class XXXServiceProvider extends XXXServiceGrpc.XXXServiceImplBase{

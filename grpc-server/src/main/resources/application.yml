@@ -6,8 +6,11 @@ spring:
       connect-string: 127.0.0.1:2181
       discovery:
         register: true
-        metadata:
-          grpc.port: 6568
+        instance-host: 127.0.0.1
+        instance-port: 6568
+server:
+  port: 8085
 
 grpc:
   port: 6568
+

@@ -3,7 +3,7 @@ package org.windwant.grpc.http.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.windwant.grpc.client.consumer.XXXServiceGrpcConsumer;
-import org.windwant.grpc.server.service.XXXService;
+import org.windwant.grpc.service.XXXService;
 
 import javax.annotation.Resource;
 

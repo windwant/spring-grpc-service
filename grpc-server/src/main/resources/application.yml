@@ -1,16 +1,17 @@
 spring:
   application:
-    name: grpc-server
+    name: grpc-server #服务名称
   cloud:
     zookeeper:
-      connect-string: 127.0.0.1:2181
+      connect-string: 127.0.0.1:2181  #zookeeper host:port
       discovery:
-        register: true
-        instance-host: 127.0.0.1
+        register: true #自动注册
+        instance-host: 127.0.0.1 #服务host
         instance-port: 6568
+
 server:
-  port: 8085
+  port: 8085 #服务接口
 
 grpc:
-  port: 6568
+  port: 6568 #grpc服务接口
 

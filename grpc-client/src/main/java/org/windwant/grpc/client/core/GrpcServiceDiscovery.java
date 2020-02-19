@@ -8,13 +8,16 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * service discovery
+ */
 @Component
 public class GrpcServiceDiscovery {
 
     @Autowired
     DiscoveryClient discoveryClient;
 
-    public ServiceInstance getService() {
+    public ServiceInstance getService(String serviceName) {
         List<ServiceInstance> instanceList = discoveryClient.getInstances("grpc-server");
 
         if (instanceList.isEmpty()) {

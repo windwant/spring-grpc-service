@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @file: GrpcServer
+ * GrpcServer
  */
-@EnableDiscoveryClient
+@EnableDiscoveryClient //服务自动注册
 @SpringBootApplication
 @ComponentScan({"org.windwant.grpc.service"})
 public class GrpcServer {

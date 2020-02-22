@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>grpc-service</artifactId>
+        <artifactId>spring-grpc-service</artifactId>
         <groupId>org.windwant.grpc</groupId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>grpc-services</artifactId>
+    <artifactId>grpc-service</artifactId>
 
     <properties>
         <spring.context.version>5.0.5.RELEASE</spring.context.version>

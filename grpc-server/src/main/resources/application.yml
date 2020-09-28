@@ -3,7 +3,7 @@ spring:
     name: grpc-server #服务名称
   cloud:
     zookeeper:
-      connect-string: 127.0.0.1:2181  #zookeeper host:port
+      connect-string: 127.0.0.1:2181  #需要注册的 zookeeper 信息 host:port
       discovery:
         register: true #自动注册
         instance-host: 127.0.0.1 #服务host

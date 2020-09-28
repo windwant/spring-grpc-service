@@ -4,7 +4,7 @@
 服务定义
 
 ## grpc-common
-接口定义
+公共模块
 
 ## grpc-server
 rpc服务
